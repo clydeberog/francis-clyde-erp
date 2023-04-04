@@ -1,0 +1,6 @@
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _82f3d10948d91a18 -p********** _82f3d10948d91a18 -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./francis-erp.com/private/backups/20230404_120002-francis-erp_com-database.sql.gz
+
+Backup Summary for francis-erp.com at 2023-04-04 12:00:04.118004
+Config  : ./francis-erp.com/private/backups/20230404_120002-francis-erp_com-site_config_backup.json 158.0B
+Database: ./francis-erp.com/private/backups/20230404_120002-francis-erp_com-database.sql.gz         1.2MiB
+Backup for Site francis-erp.com has been successfully completed

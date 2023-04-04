@@ -1,0 +1,3 @@
+2023-04-04 12:58:32,346 ERROR frappe New Exception collected with id: 2023-04-04 12:58:32.229277-127.0.0.1-295
+Site: francis-erp.com
+Form Dict: {'app_path': 'home'}

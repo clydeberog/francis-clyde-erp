@@ -1,0 +1,341 @@
+2023-04-04 11:17:06,722 DEBUG cd francis-erp && python3 -m venv env
+2023-04-04 11:17:09,695 DEBUG cd francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade pip
+2023-04-04 11:17:11,687 DEBUG cd francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet wheel
+2023-04-04 11:17:12,684 LOG Getting frappe
+2023-04-04 11:17:12,684 DEBUG cd francis-erp/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2023-04-04 11:17:18,520 LOG Installing frappe
+2023-04-04 11:17:18,520 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/frappe 
+2023-04-04 11:17:58,987 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/frappe && yarn install
+2023-04-04 11:18:04,523 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 11:18:07,660 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 11:18:07,660 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 11:18:07,660 DEBUG cd francis-erp && bench build
+2023-04-04 11:18:07,754 INFO /home/francisclyde/.local/bin/bench build
+2023-04-04 11:18:22,589 LOG setting up backups
+2023-04-04 11:18:22,596 LOG backups were set up
+2023-04-04 11:18:22,596 INFO Bench francis-erp initialized
+2023-04-04 11:20:08,874 INFO /home/francisclyde/.local/bin/bench new-site francis-erp.com
+2023-04-04 11:25:41,571 INFO /home/francisclyde/.local/bin/bench get-app erpnext
+2023-04-04 11:25:42,573 LOG Getting erpnext
+2023-04-04 11:25:42,574 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git  --depth 1 --origin upstream
+2023-04-04 11:25:49,920 LOG Installing erpnext
+2023-04-04 11:25:50,030 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/erpnext 
+2023-04-04 11:25:56,017 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/erpnext && yarn install
+2023-04-04 11:25:56,551 DEBUG bench build --app erpnext
+2023-04-04 11:25:56,644 INFO /home/francisclyde/.local/bin/bench build --app erpnext
+2023-04-04 11:25:59,795 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 11:25:59,974 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 11:25:59,974 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 11:26:22,642 INFO /home/francisclyde/.local/bin/bench restart
+2023-04-04 11:26:22,817 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 11:26:22,993 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 11:26:22,993 WARNING /home/francisclyde/.local/bin/bench restart executed with exit code 1
+2023-04-04 11:28:29,842 INFO /usr/local/bin/bench restart
+2023-04-04 11:28:30,018 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 11:28:30,198 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 11:28:30,198 WARNING /usr/local/bin/bench restart executed with exit code 1
+2023-04-04 11:28:51,219 INFO /home/francisclyde/.local/bin/bench update
+2023-04-04 11:28:53,190 WARNING shallow_clone is set in your bench config.
+However without passing the --reset flag, your repositories will be unshallowed.
+To avoid this, cancel this operation and run `bench update --reset`.
+
+Consider the consequences of `git reset --hard` on your apps before you run that.
+To avoid seeing this warning, set shallow_clone to false in your common_site_config.json
+		
+2023-04-04 11:29:04,679 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/frappe && git fetch upstream --unshallow
+2023-04-04 11:30:53,140 LOG pulling frappe
+2023-04-04 11:30:53,140 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/frappe && git pull  upstream develop
+2023-04-04 11:30:55,152 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/frappe && find . -name "*.pyc" -delete
+2023-04-04 11:30:55,231 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/erpnext && git fetch upstream --unshallow
+2023-04-04 11:34:59,744 LOG pulling erpnext
+2023-04-04 11:34:59,745 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/erpnext && git pull  upstream develop
+2023-04-04 11:35:01,767 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/erpnext && find . -name "*.pyc" -delete
+2023-04-04 11:35:01,796 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade pip
+2023-04-04 11:35:02,932 LOG Installing frappe
+2023-04-04 11:35:02,933 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/frappe 
+2023-04-04 11:35:06,145 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/frappe && yarn install
+2023-04-04 11:35:06,654 LOG Installing erpnext
+2023-04-04 11:35:06,654 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/erpnext 
+2023-04-04 11:35:09,260 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/erpnext && yarn install
+2023-04-04 11:36:35,749 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app erpnext
+2023-04-04 11:37:37,307 INFO /home/francisclyde/.local/bin/bench get-app hrms
+2023-04-04 11:37:38,334 LOG Getting hrms
+2023-04-04 11:37:38,335 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2023-04-04 11:37:41,634 LOG Installing hrms
+2023-04-04 11:37:41,784 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/hrms 
+2023-04-04 11:37:44,378 DEBUG bench build --app hrms
+2023-04-04 11:37:44,473 INFO /home/francisclyde/.local/bin/bench build --app hrms
+2023-04-04 11:37:46,748 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 11:37:46,924 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 11:37:46,925 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 11:37:56,053 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app hrms
+2023-04-04 11:38:24,835 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 11:43:44,042 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 11:48:49,045 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 11:51:31,943 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 11:51:32,203 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 11:51:32,206 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 11:51:32,207 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 11:51:32,300 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 11:52:02,556 INFO /home/francisclyde/.local/bin/bench use francis-erp.com
+2023-04-04 11:52:43,566 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 11:52:43,834 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 11:52:43,847 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 11:52:43,859 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 11:52:43,902 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 12:00:01,857 INFO /home/francisclyde/.local/bin/bench --verbose --site all backup
+2023-04-04 12:15:41,702 INFO /home/francisclyde/.local/bin/bench --version
+2023-04-04 12:29:39,943 INFO /home/francisclyde/.local/bin/bench get-app payments
+2023-04-04 12:29:40,977 LOG Getting payments
+2023-04-04 12:29:40,977 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2023-04-04 12:29:43,222 LOG Installing payments
+2023-04-04 12:29:43,367 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/payments 
+2023-04-04 12:29:48,018 DEBUG bench build --app payments
+2023-04-04 12:29:48,115 INFO /home/francisclyde/.local/bin/bench build --app payments
+2023-04-04 12:29:50,157 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 12:29:50,345 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 12:29:50,345 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 12:30:37,830 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app payments
+2023-04-04 12:30:50,051 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 12:30:50,313 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 12:30:50,316 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 12:30:50,341 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 12:30:50,368 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 12:35:19,144 INFO /home/francisclyde/.local/bin/bench get-app posawesome
+2023-04-04 12:35:21,067 WARNING /home/francisclyde/.local/bin/bench get-app posawesome executed with exit code 1
+2023-04-04 12:35:57,780 INFO /home/francisclyde/.local/bin/bench get-app https://github.com/yrestom/POS-Awesome.git
+2023-04-04 12:35:57,787 LOG Getting POS-Awesome
+2023-04-04 12:35:57,787 DEBUG cd ./apps && git clone https://github.com/yrestom/POS-Awesome.git  --depth 1 --origin upstream
+2023-04-04 12:36:20,837 LOG Installing posawesome
+2023-04-04 12:36:20,977 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/posawesome 
+2023-04-04 12:36:23,272 DEBUG cd /home/francisclyde/Desktop/francis-erp/apps/posawesome && yarn install
+2023-04-04 12:36:24,800 DEBUG bench build --app posawesome
+2023-04-04 12:36:24,900 INFO /home/francisclyde/.local/bin/bench build --app posawesome
+2023-04-04 12:36:27,665 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 12:36:27,864 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 12:36:27,864 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 12:36:55,434 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app posawesome
+2023-04-04 12:37:25,128 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 12:37:25,405 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 12:37:25,412 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 12:37:25,438 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 12:37:25,489 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 12:41:24,407 INFO /home/francisclyde/.local/bin/bench get-app https://github.com/Solufy-ERPNext-Apps/freight_management
+2023-04-04 12:41:24,414 LOG Getting freight_management
+2023-04-04 12:41:24,415 DEBUG cd ./apps && git clone https://github.com/Solufy-ERPNext-Apps/freight_management  --depth 1 --origin upstream
+2023-04-04 12:41:26,494 LOG Installing freight_management
+2023-04-04 12:41:26,641 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/freight_management 
+2023-04-04 12:41:28,203 DEBUG bench build --app freight_management
+2023-04-04 12:41:28,299 INFO /home/francisclyde/.local/bin/bench build --app freight_management
+2023-04-04 12:41:30,298 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 12:41:30,482 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 12:41:30,482 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 12:41:46,823 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app freight_management
+2023-04-04 12:41:55,448 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 12:41:55,711 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 12:41:55,730 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 12:41:55,749 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 12:41:55,782 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 12:44:04,159 INFO /home/francisclyde/.local/bin/bench uninstall-app freight_management
+2023-04-04 12:45:11,905 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app freight_management
+2023-04-04 12:49:21,866 INFO /home/francisclyde/.local/bin/bench get-app https://github.com/kid1194/frappe-active-users
+2023-04-04 12:49:21,874 LOG Getting frappe-active-users
+2023-04-04 12:49:21,874 DEBUG cd ./apps && git clone https://github.com/kid1194/frappe-active-users  --depth 1 --origin upstream
+2023-04-04 12:49:23,924 LOG Installing active_users
+2023-04-04 12:49:24,067 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/active_users 
+2023-04-04 12:49:28,414 DEBUG bench build --app active_users
+2023-04-04 12:49:28,508 INFO /home/francisclyde/.local/bin/bench build --app active_users
+2023-04-04 12:49:30,623 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 12:49:30,815 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 12:49:30,815 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 12:49:48,717 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app frappe-active-users
+2023-04-04 12:50:04,163 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app active_users
+2023-04-04 12:50:12,722 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 12:50:12,989 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 12:50:12,991 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 12:50:12,991 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 12:50:13,104 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 12:52:15,249 INFO /home/francisclyde/.local/bin/bench get-app https://github.com/IoTReady/holidays
+2023-04-04 12:52:15,257 LOG Getting holidays
+2023-04-04 12:52:15,257 DEBUG cd ./apps && git clone https://github.com/IoTReady/holidays  --depth 1 --origin upstream
+2023-04-04 12:52:18,079 LOG Installing holidays
+2023-04-04 12:52:18,223 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/holidays 
+2023-04-04 12:52:19,841 DEBUG bench build --app holidays
+2023-04-04 12:52:19,945 INFO /home/francisclyde/.local/bin/bench build --app holidays
+2023-04-04 12:52:22,085 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 12:52:22,267 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 12:52:22,267 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 12:52:39,890 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app holidays
+2023-04-04 12:55:37,187 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 12:55:37,459 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 12:55:37,464 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 12:55:37,464 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 12:55:37,551 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 12:57:53,132 INFO /home/francisclyde/.local/bin/bench get-app https://github.com/frappe/email_delivery_service
+2023-04-04 12:57:53,139 LOG Getting email_delivery_service
+2023-04-04 12:57:53,139 DEBUG cd ./apps && git clone https://github.com/frappe/email_delivery_service  --depth 1 --origin upstream
+2023-04-04 12:57:55,212 LOG Installing email_delivery_service
+2023-04-04 12:57:55,356 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/email_delivery_service 
+2023-04-04 12:57:56,967 DEBUG bench build --app email_delivery_service
+2023-04-04 12:57:57,064 INFO /home/francisclyde/.local/bin/bench build --app email_delivery_service
+2023-04-04 12:57:59,144 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 12:57:59,329 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 12:57:59,330 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 12:58:22,319 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app email_delivery_service
+2023-04-04 12:58:40,106 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 12:58:40,375 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 12:58:40,385 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 12:58:40,399 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 12:58:40,402 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 13:03:10,509 INFO /home/francisclyde/.local/bin/bench get-app https://github.com/alyf-de/erpnext_pdf-on-submit
+2023-04-04 13:03:10,517 LOG Getting erpnext_pdf-on-submit
+2023-04-04 13:03:10,517 DEBUG cd ./apps && git clone https://github.com/alyf-de/erpnext_pdf-on-submit  --depth 1 --origin upstream
+2023-04-04 13:03:13,591 LOG Installing pdf_on_submit
+2023-04-04 13:03:13,737 DEBUG cd /home/francisclyde/Desktop/francis-erp && /home/francisclyde/Desktop/francis-erp/env/bin/python -m pip install --quiet --upgrade -e /home/francisclyde/Desktop/francis-erp/apps/pdf_on_submit 
+2023-04-04 13:03:16,504 DEBUG bench build --app pdf_on_submit
+2023-04-04 13:03:16,606 INFO /home/francisclyde/.local/bin/bench build --app pdf_on_submit
+2023-04-04 13:03:18,693 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 13:03:18,879 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 13:03:18,879 WARNING restarting supervisor failed. Use `bench restart` to retry.
+2023-04-04 13:03:33,571 INFO /home/francisclyde/.local/bin/bench --site francis-erp.com install-app pdf_on_submit
+2023-04-04 13:03:43,907 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 13:03:44,182 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 13:03:44,202 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 13:03:44,255 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 13:03:44,263 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 13:43:22,236 INFO /home/francisclyde/.local/bin/bench restart
+2023-04-04 13:43:22,417 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web:
+2023-04-04 13:43:22,608 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart francis-erp-workers: francis-erp-web: executed with exit code 7
+2023-04-04 13:43:22,608 WARNING /home/francisclyde/.local/bin/bench restart executed with exit code 1
+2023-04-04 13:45:07,256 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 13:45:07,556 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 13:45:07,569 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 13:45:07,571 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 13:45:07,588 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 13:47:18,033 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 13:47:18,318 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 13:47:18,350 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 13:47:18,374 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 13:47:18,386 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 13:51:49,411 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 13:51:49,668 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 13:51:49,703 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 13:51:49,718 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 13:51:49,757 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 14:05:13,331 INFO /usr/local/bin/bench setup prodcution
+2023-04-04 14:05:13,337 WARNING /usr/local/bin/bench setup prodcution executed with exit code 2
+2023-04-04 14:05:20,965 INFO /usr/local/bin/bench setup production
+2023-04-04 14:05:20,970 WARNING /usr/local/bin/bench setup production executed with exit code 2
+2023-04-04 14:05:32,092 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:05:32,107 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:05:32,107 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:05:32,170 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:05:32,180 WARNING sudo /usr/sbin/nginx -t executed with exit code 1
+2023-04-04 14:05:32,180 WARNING /usr/local/bin/bench setup production francisclyde executed with exit code 1
+2023-04-04 14:10:51,636 INFO /home/francisclyde/.local/bin/bench setup nginx
+2023-04-04 14:12:34,060 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:12:34,067 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:12:34,067 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:12:39,909 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:12:40,084 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:12:40,252 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:12:40,261 WARNING sudo /usr/sbin/nginx -t executed with exit code 1
+2023-04-04 14:12:40,261 WARNING /usr/local/bin/bench setup production francisclyde executed with exit code 1
+2023-04-04 14:17:01,799 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:17:01,806 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:17:01,806 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:17:04,805 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:17:04,976 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:17:05,141 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:17:05,150 WARNING sudo /usr/sbin/nginx -t executed with exit code 1
+2023-04-04 14:17:05,150 WARNING /usr/local/bin/bench setup production francisclyde executed with exit code 1
+2023-04-04 14:19:31,526 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:19:31,533 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:19:31,533 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:19:34,347 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:19:34,516 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:19:34,683 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:19:34,692 WARNING sudo /usr/sbin/nginx -t executed with exit code 1
+2023-04-04 14:19:34,692 WARNING /usr/local/bin/bench setup production francisclyde executed with exit code 1
+2023-04-04 14:22:56,524 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:22:56,530 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:22:56,530 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:22:58,560 WARNING /usr/local/bin/bench setup production francisclyde executed with exit code 1
+2023-04-04 14:23:02,118 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:23:02,125 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:23:02,125 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:23:04,214 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:23:04,383 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:23:04,548 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:23:04,558 WARNING sudo /usr/sbin/nginx -t executed with exit code 1
+2023-04-04 14:23:04,558 WARNING /usr/local/bin/bench setup production francisclyde executed with exit code 1
+2023-04-04 14:32:21,677 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:32:21,684 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:32:21,684 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:32:24,350 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:32:24,524 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:32:24,691 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:32:24,701 WARNING sudo /usr/sbin/nginx -t executed with exit code 1
+2023-04-04 14:32:24,701 WARNING /usr/local/bin/bench setup production francisclyde executed with exit code 1
+2023-04-04 14:33:46,469 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:33:46,476 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:33:46,476 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:33:48,918 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:33:49,091 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:33:49,260 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:33:49,271 DEBUG sudo systemctl reload nginx
+2023-04-04 14:35:52,047 INFO /home/francisclyde/.local/bin/bench restart
+2023-04-04 14:35:52,222 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe:
+2023-04-04 14:35:52,395 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe: executed with exit code 2
+2023-04-04 14:35:52,396 WARNING /home/francisclyde/.local/bin/bench restart executed with exit code 1
+2023-04-04 14:36:53,990 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:36:53,997 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:36:53,997 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:36:56,318 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:36:56,495 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:36:56,660 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:36:56,670 DEBUG sudo systemctl reload nginx
+2023-04-04 14:37:03,215 INFO /home/francisclyde/.local/bin/bench restart
+2023-04-04 14:37:03,390 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe:
+2023-04-04 14:37:03,562 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe: executed with exit code 2
+2023-04-04 14:37:03,562 WARNING /home/francisclyde/.local/bin/bench restart executed with exit code 1
+2023-04-04 14:39:53,824 INFO /home/francisclyde/.local/bin/bench restart
+2023-04-04 14:39:53,999 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe:
+2023-04-04 14:39:54,174 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe: executed with exit code 2
+2023-04-04 14:39:54,174 WARNING /home/francisclyde/.local/bin/bench restart executed with exit code 1
+2023-04-04 14:43:57,153 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:43:57,160 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:43:57,160 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:43:59,363 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:43:59,538 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:43:59,705 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:43:59,716 DEBUG sudo systemctl reload nginx
+2023-04-04 14:44:06,216 INFO /home/francisclyde/.local/bin/bench restart
+2023-04-04 14:44:06,391 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe:
+2023-04-04 14:44:06,566 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe: executed with exit code 2
+2023-04-04 14:44:06,566 WARNING /home/francisclyde/.local/bin/bench restart executed with exit code 1
+2023-04-04 14:48:48,577 INFO /usr/local/bin/bench setup production francisclyde
+2023-04-04 14:48:48,584 LOG Updated supervisord.conf: 'chmod' changed from '0700                       ; sockef file mode (default 0700)' to '0760'
+2023-04-04 14:48:48,584 LOG Updated supervisord.conf: 'chown' changed from '' to 'francisclyde:francisclyde'
+2023-04-04 14:48:50,606 DEBUG /usr/local/bin/supervisorctl reread
+2023-04-04 14:48:50,774 DEBUG /usr/local/bin/supervisorctl update
+2023-04-04 14:48:50,940 DEBUG sudo /usr/sbin/nginx -t
+2023-04-04 14:48:50,950 DEBUG sudo systemctl reload nginx
+2023-04-04 14:48:54,604 INFO /home/francisclyde/.local/bin/bench restart
+2023-04-04 14:48:55,143 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe:
+2023-04-04 14:48:55,316 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe: executed with exit code 2
+2023-04-04 14:48:55,316 WARNING /home/francisclyde/.local/bin/bench restart executed with exit code 1
+2023-04-04 14:51:54,089 INFO /home/francisclyde/.local/bin/bench restart
+2023-04-04 14:51:54,628 DEBUG cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe:
+2023-04-04 14:51:54,802 WARNING cd /home/francisclyde/Desktop/francis-erp && supervisorctl restart frappe: executed with exit code 2
+2023-04-04 14:51:54,802 WARNING /home/francisclyde/.local/bin/bench restart executed with exit code 1
+2023-04-04 14:55:05,908 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 14:55:06,751 INFO /home/francisclyde/.local/bin/bench serve --port 8000
+2023-04-04 14:55:06,755 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 14:55:06,770 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 14:55:06,824 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 15:01:39,075 INFO /home/francisclyde/.local/bin/bench start
+2023-04-04 15:01:39,792 INFO /home/francisclyde/.local/bin/bench watch
+2023-04-04 15:01:39,815 INFO /home/francisclyde/.local/bin/bench schedule
+2023-04-04 15:01:39,831 INFO /home/francisclyde/.local/bin/bench worker
+2023-04-04 15:01:39,858 INFO /home/francisclyde/.local/bin/bench serve --port 8000

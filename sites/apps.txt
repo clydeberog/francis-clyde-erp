@@ -1,0 +1,10 @@
+frappe
+hrms
+erpnext
+email_delivery_service
+pdf_on_submit
+payments
+freight_management
+active_users
+holidays
+posawesome

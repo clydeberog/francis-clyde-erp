@@ -1,0 +1,101 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "15.0.0-dev"
+    },
+    "erpnext": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "12325cb685866b54adc53816cedb59d906841df4",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "14.0.0-dev"
+    },
+    "hrms": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "8e4f23f39489a31be446bd5a500af2d76c46ba69",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 3,
+        "version": "15.0.0-dev"
+    },
+    "payments": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "15bd4b4dd92d3cb05ee0efe757f3857562e474e9",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 4,
+        "version": "0.0.1"
+    },
+    "posawesome": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "c4c6f9501af3d4ef17170bd3a70a427c04a9260f",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 5,
+        "version": "4.2.2"
+    },
+    "freight_management": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "6b8d064889fb9092a43ff81235a1b1030c226833",
+            "branch": "13.0"
+        },
+        "required": [],
+        "idx": 6,
+        "version": "0.0.1"
+    },
+    "active_users": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "a2484eebe2166d7f647635f8542467f5a6e1ed10",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 7,
+        "version": "1.0.7"
+    },
+    "holidays": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "b6eeeb197908b87e2fbfc3ee518e27960804752c",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 8,
+        "version": "0.0.1"
+    },
+    "email_delivery_service": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "9174db34b957d9ecfb338a80dfcf0737dc601d3b",
+            "branch": "main"
+        },
+        "required": [],
+        "idx": 9,
+        "version": "0.0.1"
+    },
+    "pdf_on_submit": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "9500fb9693fc0666800314885ceac8af3575b33d",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 10,
+        "version": "13.2"
+    }
+}
